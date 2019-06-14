@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.0a797c28.chunk.css",
-    "main.js": "/static/js/main.36874fd4.chunk.js",
-    "main.js.map": "/static/js/main.36874fd4.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.9ae11205.chunk.js": "/static/js/2.9ae11205.chunk.js",
-    "static/js/2.9ae11205.chunk.js.map": "/static/js/2.9ae11205.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.447cd33f4cd207cbc2274343aeb87bea.js": "/precache-manifest.447cd33f4cd207cbc2274343aeb87bea.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.0a797c28.chunk.css.map": "/static/css/main.0a797c28.chunk.css.map",
-    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+    "main.css": "/simple-baby-tracking/static/css/main.acbdc72b.chunk.css",
+    "main.js": "/simple-baby-tracking/static/js/main.8f9d970a.chunk.js",
+    "main.js.map": "/simple-baby-tracking/static/js/main.8f9d970a.chunk.js.map",
+    "runtime~main.js": "/simple-baby-tracking/static/js/runtime~main.000e4589.js",
+    "runtime~main.js.map": "/simple-baby-tracking/static/js/runtime~main.000e4589.js.map",
+    "static/js/2.a45a2b72.chunk.js": "/simple-baby-tracking/static/js/2.a45a2b72.chunk.js",
+    "static/js/2.a45a2b72.chunk.js.map": "/simple-baby-tracking/static/js/2.a45a2b72.chunk.js.map",
+    "index.html": "/simple-baby-tracking/index.html",
+    "precache-manifest.2b6472b4a3903b692ed90ce1c181bc20.js": "/simple-baby-tracking/precache-manifest.2b6472b4a3903b692ed90ce1c181bc20.js",
+    "service-worker.js": "/simple-baby-tracking/service-worker.js",
+    "static/css/main.acbdc72b.chunk.css.map": "/simple-baby-tracking/static/css/main.acbdc72b.chunk.css.map"
   }
 }
