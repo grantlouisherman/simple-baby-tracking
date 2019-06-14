@@ -14,8 +14,12 @@ import { databaseRef } from './Components/firebaseconnection'
    }
    transformData = obj => {
      const output = []
+     let todaysDate = new Date ()
+     todaysDate = todaysDate.getDate()
     Object.keys(obj).forEach(key => {
-      output.push({time:key, data: obj[key]})
+      if(new Date(key).getDate() === todaysDate ) {
+        output.push({time:key, data: obj[key]})
+      }
     })
     return output
    }
