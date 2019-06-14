@@ -1,26 +1,51 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Button from './Components/Button'
+import TimeSeries  from './Components/TimeSeries'
+import { databaseRef } from './Components/firebaseconnection'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ class  App extends  Component {
+   constructor(){
+     super()
+     this.state = {
+       firebaseLoaded: false,
+       firebaseData: []
+     }
+   }
+   transformData = obj => {
+     const output = []
+    Object.keys(obj).forEach(key => {
+      output.push({time:key, data: obj[key]})
+    })
+    return output
+   }
+   componentDidMount(){
+    databaseRef.on("value", (snapshot) => {
+      this.setState({firebaseLoaded: true, firebaseData: this.transformData(snapshot.val()) })
+    }, function (errorObject) {
+      console.log("The read failed: " + errorObject.code);
+    });
+   }
+
+
+  render(){
+    return (
+      <div className="App">
+        <Button name='poop-diaper' firebaseRef={databaseRef}/>
+        <Button name='wet-diaper' firebaseRef={databaseRef} />
+        <Button name='fed' firebaseRef={databaseRef} />
+        <ul>
+        {
+          this.state.firebaseLoaded ? 
+          this.state.firebaseData.map(data => <li>{JSON.stringify( data, null, 4) }</li>)
+          : null
+        }
+        </ul>
+      </div>
+    );
+  }
+  
 }
 
 export default App;
