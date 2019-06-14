@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/simple-baby-tracking/static/css/main.acbdc72b.chunk.css",
-    "main.js": "/simple-baby-tracking/static/js/main.8f9d970a.chunk.js",
-    "main.js.map": "/simple-baby-tracking/static/js/main.8f9d970a.chunk.js.map",
+    "main.js": "/simple-baby-tracking/static/js/main.d966e668.chunk.js",
+    "main.js.map": "/simple-baby-tracking/static/js/main.d966e668.chunk.js.map",
     "runtime~main.js": "/simple-baby-tracking/static/js/runtime~main.000e4589.js",
     "runtime~main.js.map": "/simple-baby-tracking/static/js/runtime~main.000e4589.js.map",
     "static/js/2.a45a2b72.chunk.js": "/simple-baby-tracking/static/js/2.a45a2b72.chunk.js",
     "static/js/2.a45a2b72.chunk.js.map": "/simple-baby-tracking/static/js/2.a45a2b72.chunk.js.map",
     "index.html": "/simple-baby-tracking/index.html",
-    "precache-manifest.2b6472b4a3903b692ed90ce1c181bc20.js": "/simple-baby-tracking/precache-manifest.2b6472b4a3903b692ed90ce1c181bc20.js",
+    "precache-manifest.c1354ecee0c6ceb6337f5f445ea66710.js": "/simple-baby-tracking/precache-manifest.c1354ecee0c6ceb6337f5f445ea66710.js",
     "service-worker.js": "/simple-baby-tracking/service-worker.js",
     "static/css/main.acbdc72b.chunk.css.map": "/simple-baby-tracking/static/css/main.acbdc72b.chunk.css.map"
   }
