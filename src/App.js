@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Button from './Components/Button'
-import TimeSeries  from './Components/TimeSeries'
+import DailyCounts from './Components/DailyCounts'
+
 import { databaseRef } from './Components/firebaseconnection'
 
  class  App extends  Component {
@@ -9,7 +10,8 @@ import { databaseRef } from './Components/firebaseconnection'
      super()
      this.state = {
        firebaseLoaded: false,
-       firebaseData: []
+       firebaseData: [],
+       countsData: {}
      }
    }
    transformData = obj => {
@@ -25,7 +27,7 @@ import { databaseRef } from './Components/firebaseconnection'
    }
    componentDidMount(){
     databaseRef.on("value", (snapshot) => {
-      this.setState({firebaseLoaded: true, firebaseData: this.transformData(snapshot.val()) })
+      this.setState({firebaseLoaded: true, firebaseData: this.transformData(snapshot.val()), countsData:snapshot.val() })
     }, function (errorObject) {
       console.log("The read failed: " + errorObject.code);
     });
@@ -45,6 +47,11 @@ import { databaseRef } from './Components/firebaseconnection'
           : null
         }
         </ul>
+        {
+          this.state.firebaseLoaded ? 
+          <DailyCounts data={this.state.countsData} />
+          : null
+        }
       </div>
     );
   }
