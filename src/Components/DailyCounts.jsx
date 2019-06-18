@@ -29,7 +29,6 @@ class DailyCounts extends Component {
                     poops: 0,
                     feeds: 0
                 }
-                console.log(fireBaseData[key])
                 timeTable[dateKey][this.nameConverter(valueToUpdate)] =
                 timeTable[dateKey][this.nameConverter(valueToUpdate)] + 1
             }else{
@@ -38,6 +37,18 @@ class DailyCounts extends Component {
             }
           })
           return timeTable
+    }
+
+    sortTimeTableAscendingOrder = timeTableObj => {
+        const numberToDateConverter = date => {
+            const dateToArray = String(date).split("")
+            dateToArray.splice(1, 0, "-")
+            return dateToArray.join("")
+        }
+        let datesAsNumbers = Object.keys(timeTableObj).map(time => parseInt(time.replace("-","")))
+        datesAsNumbers = datesAsNumbers.sort((a,b) => b-a)
+        datesAsNumbers = datesAsNumbers.map(numberToDateConverter)
+        return datesAsNumbers
     }
 
   
@@ -49,7 +60,7 @@ class DailyCounts extends Component {
             <div>
                 {
                     this.state.loadTimeTable ? 
-                    Object.keys(this.state.timeTable).map(key =>(
+                    this.sortTimeTableAscendingOrder(this.state.timeTable).map(key =>(
                         <CountCard 
                         date={key}
                         wets={this.state.timeTable[key].wets}

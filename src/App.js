@@ -17,6 +17,7 @@ import { databaseRef } from './Components/firebaseconnection'
    transformData = obj => {
      const output = []
      let todaysDate = new Date ()
+     // const currentMonth = todaysDate.getMonth()
      todaysDate = todaysDate.getDate()
     Object.keys(obj).forEach(key => {
       if(new Date(key).getDate() === todaysDate ) {

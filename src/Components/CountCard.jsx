@@ -1,7 +1,6 @@
 import React from 'react'
 
 const CountCard = props => {
-    console.log(props)
     return (
         <div class="card">
         <div class="card-body">
