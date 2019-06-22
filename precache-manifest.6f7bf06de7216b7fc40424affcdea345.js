@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "353fa2e55faea675f019fb52a851fb76",
+    "revision": "ff696daf765f63ceffc456cf39c315d9",
     "url": "/simple-baby-tracking/index.html"
   },
   {
-    "revision": "b990c3f3dd0ddcb2740c",
+    "revision": "7d41f7618f13eee49619",
     "url": "/simple-baby-tracking/static/css/main.acbdc72b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/simple-baby-tracking/static/js/2.0603af4e.chunk.js"
   },
   {
-    "revision": "b990c3f3dd0ddcb2740c",
-    "url": "/simple-baby-tracking/static/js/main.6182232f.chunk.js"
+    "revision": "7d41f7618f13eee49619",
+    "url": "/simple-baby-tracking/static/js/main.c8160550.chunk.js"
   },
   {
     "revision": "b7fa6c36d15c92f41682",
