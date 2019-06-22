@@ -1,0 +1,24 @@
+<MainView>
+<! -- Tab 1 -- >
+<Current Count And Top 5 Items From Logs>
+<!-- Tab 2 -->
+<Todays Log></Todays>
+<! -- Tab 3 -- >
+<Older Counts></Older>
+
+</MainView>
+
+
+ <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active"><br>
+      <Current Count And Top 5 Items From Logs>
+    </div>
+    <div id="currentLog" class="container tab-pane fade"><br>
+      <Todays Log></Todays>
+    </div>
+    <div id="OlderCounts" class="container tab-pane fade"><br>
+      <Older Counts></Older>
+    </div>
+  </div>
+</div>

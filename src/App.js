@@ -20,7 +20,8 @@ import { databaseRef } from './Components/firebaseconnection'
      // const currentMonth = todaysDate.getMonth()
      todaysDate = todaysDate.getDate()
     Object.keys(obj).forEach(key => {
-      if(new Date(key).getDate() === todaysDate ) {
+      const currentDate = new Date(key)
+      if(currentDate.getDate() === todaysDate ) {
         output.push({time:key, data: obj[key]})
       }
     })
@@ -44,7 +45,7 @@ import { databaseRef } from './Components/firebaseconnection'
         <ul>
         {
           this.state.firebaseLoaded ? 
-          this.state.firebaseData.map(data => <li>{JSON.stringify( data, null, 4) }</li>)
+          this.state.firebaseData.map(logData => <li>{`Date: ${logData.time}  Information: ${JSON.stringify( logData.data, null, 4)}  `}</li>)
           : null
         }
         </ul>

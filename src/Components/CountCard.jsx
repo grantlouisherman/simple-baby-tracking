@@ -12,6 +12,10 @@ const CountCard = props => {
             <p class="card-text">{props.poops}</p>
             <h4># of Feeds</h4>
             <p class="card-text">{props.feeds}</p>
+            <h4># of Breasts Feeds</h4>
+            <p class="card-text">{props.breastFeeds}</p>
+            <h4># of Bottle Feeds</h4>
+            <p class="card-text">{props.bottleFeeds}</p>
         </div>
         </div>
     )

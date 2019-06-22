@@ -13,28 +13,40 @@ class DailyCounts extends Component {
         return {
             "wet-diaper": "wets",
             "fed": "feeds",
-            "poop-diaper": "poops"
+            "poop-diaper": "poops",
+            "Breast Milk": "breastFeeds",
+            "Bottle": "bottleFeeds"
+
         }[name]
     }
     dailyCounts = fireBaseData => {
         const timeTable = {}
         Object.keys(fireBaseData).forEach(key => {
+            
             const currentDay = new Date(key).getDate()
             const currentMonth = new Date(key).getMonth()+1
-            const valueToUpdate = Object.keys(fireBaseData[key])[0]
+            const valueToUpdate = Object.keys(fireBaseData[key])[0]            
             const dateKey = `${currentMonth}-${currentDay}`
             if(!timeTable[dateKey]) {
                 timeTable[dateKey] = {
                     wets:0,
                     poops: 0,
-                    feeds: 0
+                    feeds: 0,
+                    breastFeeds: 0,
+                    bottleFeeds: 0
                 }
-                timeTable[dateKey][this.nameConverter(valueToUpdate)] =
-                timeTable[dateKey][this.nameConverter(valueToUpdate)] + 1
-            }else{
-                timeTable[dateKey][this.nameConverter(valueToUpdate)] =
-                timeTable[dateKey][this.nameConverter(valueToUpdate)] + 1
             }
+           
+            if(fireBaseData[key][valueToUpdate].typeOfFeeding){
+                const convertedName = this.nameConverter(fireBaseData[key][valueToUpdate].typeOfFeeding)
+                
+                timeTable[dateKey][convertedName] =
+                timeTable[dateKey][convertedName] + 1
+            }else {
+            timeTable[dateKey][this.nameConverter(valueToUpdate)] =
+            timeTable[dateKey][this.nameConverter(valueToUpdate)] + 1
+            }
+            
           })
           return timeTable
     }
@@ -66,6 +78,8 @@ class DailyCounts extends Component {
                         wets={this.state.timeTable[key].wets}
                         poops={this.state.timeTable[key].poops}
                         feeds={this.state.timeTable[key].feeds}
+                        breastFeeds={this.state.timeTable[key].breastFeeds}
+                        bottleFeeds={this.state.timeTable[key].bottleFeeds}
                         />
                     ))
                     :
