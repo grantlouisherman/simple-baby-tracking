@@ -7,7 +7,7 @@ const Button = (props) => {
     const timeRef = databaseRef.child(String(new Date()));
     const amount = type === 'fed' ? document.getElementById('amount').value : false
     const typeOfFeeding = type === 'fed' ? document.getElementById('type').value : false
-    if(!amount || !typeOfFeeding){
+    if( type === 'fed' && (!amount || !typeOfFeeding)){
       alert('You need to add amount of milk and type of milk')
     }
     console.log({ 'fed': { amount, typeOfFeeding } })
